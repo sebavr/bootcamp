@@ -1,0 +1,135 @@
+            * {
+                outline: 1px;
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #cabecera {
+                background-color: rgba(242, 242, 242, 255);
+                padding: 10px 0px;
+            }
+            
+            #cabecera h1 {
+                display: inline-block;
+                width: 520px;
+                margin-left: 15px;
+            }
+            
+            #cabecera p {
+                display: inline;
+                text-align: right;
+                width: 1100px;
+                font-size: 20px;
+                vertical-align: top;
+                margin-left: 45px;
+                font-style: unset;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            #contenedor {
+                width: 980px;
+            }
+            
+            #main {
+                background-color: rgb(75, 55, 62, 255);
+                padding: 20px 0px 20px 20px;
+                display: inline-block;
+                width: 960px;
+            }
+            
+            #about {
+                margin-bottom: 20px;
+                width: 960px;
+            }
+            
+            #about div {
+                display: inline-block;
+                width: 508px;
+                vertical-align: top;
+                margin-left: 20px;
+                background-color: white;
+            }
+            
+            #about div p {
+                padding: 10px;
+            }
+            
+            #about img {
+                width: 400px;
+                height: 300px;
+                border: 5px solid gray;
+            }
+            
+            #about div h2,
+            #caja div h3,
+            #caja div h4 {
+                background-color: silver;
+                color: white;
+                padding: 8px;
+                text-align: left;
+            }
+            
+            #caja div {
+                display: inline-block;
+                vertical-align: top;
+                width: 300px;
+                background-color: white;
+                text-align: center;
+            }
+            
+            #caja div img {
+                width: 300px;
+            }
+            
+            #caja div p {
+                padding: 5px;
+                height: 150px;
+                margin-top: -5px;
+                text-align: left;
+            }
+            /*iconos*/
+            
+            #caja div div img {
+                width: 46px;
+                margin: 5px;
+            }
+            
+            #caja div div {
+                text-align: left;
+            }
+            
+            #caja div button {
+                background-color: teal;
+                color: white;
+                margin-left: 100px;
+                display: inline-block;
+                border-radius: 5px;
+                border: 1px solid black;
+                box-shadow: slategray;
+                padding: 5px;
+                margin-bottom: 15px;
+            }
+            
+            #caja {
+                width: 300px;
+                display: inline-block;
+                margin-right: 17px;
+            }
+            
+            #pie img {
+                width: 20px;
+            }
+            
+            #pie p {
+                text-decoration: underline;
+                font-style: italic;
+            }
+            
+            #pie {
+                text-align: center;
+                padding: 10px 0px;
+                margin-right: 700px;
+                font-size: 20px;
+                background-color: rgba(242, 242, 242, 255);
+                width: 980px;
+            }

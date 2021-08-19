@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>Recursive Fill</title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .row div {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+        
+        .white {
+            background-color: white;
+        }
+        
+        .red {
+            background-color: red;
+        }
+        
+        .yellow {
+            background-color: yellow;
+        }
+        
+        .blue {
+            background-color: blue;
+        }
+        
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='container'></div>
+
+    <script type="text/javascript">
+        var world = [
+            [1, 1, 1, 0, 0, 0, 0, 3, 2, 2],
+            [0, 0, 0, 0, 1, 0, 0, 3, 3, 3],
+            [0, 2, 2, 0, 1, 0, 0, 0, 0, 0],
+            [0, 2, 2, 0, 1, 1, 1, 1, 0, 0],
+            [0, 2, 2, 0, 1, 0, 0, 0, 0, 3],
+            [0, 2, 2, 0, 1, 0, 0, 3, 3, 3],
+            [0, 0, 0, 0, 1, 0, 0, 3, 3, 3]
+        ];
+
+        var mapping = {
+            0: 'white',
+            1: 'red',
+            2: 'yellow',
+            3: 'blue',
+            4: 'green'
+        }
+
+        function drawWorld() {
+            var output = ''; //array vacio a llenar
+            for (var i = 0; i < world.length; i++) //for que recorre el numero de filas 7
+            {
+                output += '<div class="row">'; //cada vez q empieza una fila, lo hace con la clase ="row" guardado en output
+                for (var j = 0; j < world[i].length; j++) //for que recorre los elementos dentro de la fila 10
+                {
+                    output += "<div class='" + mapping[world[i][j]] + "'></div>"; // se añade en ouput, se añade otro div para el cuadrado de color
+                    //ejemplo para la posicion  i=0;j=0 es 1 segun world, para mapping seria red ==> <div class= 'red'></div>
+                    //(i=0,j=1)=>1 => <div class= 'red'></div>
+                }
+                output += '</div>'; //cierra el div del row 
+            }
+            document.getElementById('container').innerHTML = output; //queda en el mismo documento
+            // console.log(output);
+        }
+
+        document.onclick = function(e) {
+            //console.log('Coordinate Clicked', e.x, e.y);
+
+            var x = Math.floor(e.x / 50); //math floor redondea hacia abajo el numero
+            var y = Math.floor(e.y / 50);
+
+            // console.log('X, Y', x, y);
+            //console.log('Original Color', world[y][x]);
+
+            console.log('Replace color', world[y][x], ' with color 4 starting from x:', x, 'y:', y);
+            fill(x, y, world[y][x], 4);
+            //luego de imprimir que reemplazara el wolrd por el verde, llama a la funcion fill
+        }
+
+        function fill(x, y, original_color, color) {
+            //original_color es el color que viene por el world, 4 es el verde
+            if (y < 0 || y >= world.length || x < 0 || x >= 10) //perimetro
+                return false;
+
+            if (world[y][x] != original_color) //si intenta cambiar
+                return false;
+            world[y][x] = color; //el color pasa  a ser verde, esta es la funcion principal del fill
+            fill(x, y - 1, original_color, color); //se rellenan los vecinos
+            fill(x, y + 1, original_color, color);
+            fill(x - 1, y, original_color, color);
+            fill(x + 1, y, original_color, color);
+
+            drawWorld();
+
+        }
+
+        drawWorld();
+    </script>
+
+</body>
+
+</html>

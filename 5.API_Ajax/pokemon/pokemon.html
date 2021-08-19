@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+
+
+
+            function pokemon(n) {
+                return '<img src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + n + '.png>';
+
+            };
+            let output = '';
+
+            for (var i = 1; i <= 151; i++) {
+                output += '<div><img src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + i + '.png></div>';
+
+                $('#pokemon').html(output);
+            };
+
+
+        });
+    </script>
+    <style>
+        .row-cols-10 img {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-cols-10" id="pokemon">
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+create database nombres;
+
+CREATE TABLE Persons (
+    Apellido varchar(255),
+    Nombre varchar(255),
+    Ciudad varchar(255)
+);
+
+INSERT INTO Persons ( Apellido, Nombre, Ciudad)
+VALUES ('villagra', 'carlos', 'temuco');
+
+Select * from persons;
+
+update persons
+set Apellido='Pereira'
+where Apellido='villagra';
+
+delete from persons
+where Nombre='carlos';

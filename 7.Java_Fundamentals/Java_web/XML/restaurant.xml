@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8">
+<Comidas>
+    <item category="desayuno">
+        <name>Café</name>
+        <description>Un café caliente</description>
+        <price>1000 pesos</price>
+    </item>
+  <item category="desayuno">
+        <name>Sandwich</name>
+        <description>Un sandwich de jamon y queso</description>
+        <price>1500 pesos</price>
+    </item>
+  <item category="desayuno">
+        <name>Jugo de fruta</name>
+        <description>Un jugo de naranja fresca</description>
+        <price>500 pesos</price>
+    </item>
+   <item category="Almuerzo">
+        <name>Bictec con agregado</name>
+        <description>Un bistec de vacuno a la plancha con arroz,papas o tallarines</description>
+        <price>3000 pesos</price>
+    </item>
+   <item category="Almuerzo">
+        <name>Tortilla de acelga</name>
+        <description>Tortirlla de acelga con acompañamiento</description>
+        <price>3000 pesos</price>
+    </item>
+    <item category="Almuerzo">
+        <name>Jugo</name>
+        <description>Jugo de fruta para acompañar el almuerzo</description>
+        <price>2500 pesos</price>
+    </item>
+    <item category="Cena">
+        <name>Sopa</name>
+        <description>Sopa de pollo para la entrada</description>
+        <price>1500 pesos</price>
+    </item>
+      
+</Comidas>

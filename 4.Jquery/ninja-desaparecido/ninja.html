@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Desaparecido</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        img {
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+            margin: 30px 20px 30px 0px;
+        }
+        
+        .container {
+            background-color: lightslategray;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            //adjunta un "click event listener" a todas las etiquetas img cuando el documento esté listo
+            $('img').click(function() {
+                $(this).hide();
+            });
+
+
+            $('#restaurar').click(function() {
+                $("img").show();
+            });
+        });
+    </script>
+
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <p>El ninja desaparecido</p>
+
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <img src="ninja.png">
+        <div class="row">
+            <button id="restaurar" class="btn btn-primary">Restaurar</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+* {
+    outline: 0px solid red;
+}
+
+body {
+    background-image: url('banco_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

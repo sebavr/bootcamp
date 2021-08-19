@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var edad = document.getElementById("edad").value;
+            var rut = document.getElementById("rut").value;
+            var email = document.getElementById("email").value;
+            var telefono = document.getElementById("telefono").value;
+            var ciudad = document.getElementById("ciudad").value;
+            var direccion = document.getElementById("direccion").value;
+            var renta = document.getElementById("renta").value;
+            var ayuda = document.getElementById("ayuda").checked;
+            var aut = document.getElementById("aut").checked;
+            var perfil = document.getElementById("perfil").value;
+            if (nombre == "" || apellido == "" || edad == "" || rut == "" || email == "" || telefono == "" || ciudad == "" || direccion == "" || renta == "" || ayuda == "" || aut == "" || perfil == "") {
+                alert("Asegurese de responder todas las preguntas");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <label for="name">Nombres:</label><br>
+            <input type="text" id="nombre"><br>
+            <label for="lname">Apellidos:</label><br>
+            <input type="text" id="apellido" name="lname"><br>
+            <label for="lname">Edad:</label><br>
+            <input type="text" id="edad" name="lname"><br>
+            <label for="qname">Rut:</label><br>
+            <input type="text" id="rut" name="rut"><br>
+            <label for="lname">Email:</label><br>
+            <input type="text" id="email" name="mail"><br>
+            <label for="lname">Teléfono:</label><br>
+            <input type="text" id="telefono" name="fono"><br>
+            <label for="lname">Ciudad:</label><br>
+            <input type="text" id="ciudad" name="fono"><br>
+            <label for="lname">Dirección:</label><br>
+            <input type="text" id="direccion" name="fono"><br><br>
+            <label for="lname">Renta líquida:</label><br>
+            <input type="text" id="renta" name="renta"><br><br>
+
+            <br><label for="cars">¿Con cual perfil te identificas?</label>
+            <select id="perfil" required>
+            <option value=""></option>
+            <option value="Ti">Trabajador Independiente</option>
+            <option value="Td">Trabajador Dependiente</option>
+            <option value="Eu">Estudiante Universitario</option>
+            </select>
+            <br>
+            <label for="cars">¿Estás recibiendo ayuda de un ejecutivo?</label><br>
+            <input type="checkbox" id="ayuda">
+            <label for="vehicle1"> Si</label><br>
+            <input type="checkbox" id="aut">
+            <label for="vehicle1"> Autorizo a Banco Superman por intermedio de EQUIFAX a validar mi identidad a través de mi RUT/Nº de serie y a solicitar mi certificado de deuda en las entidades financieras de origen con el fin de ser consideradas como antecedentes para la solicitud y evaluación de Portabilidad Financiera, dando así cumplimiento al artículo 4º de la ley Nº 19.628 sobre Protección de la Vida Privada y a lo dispuesto en la ley Nº 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicio de Certificación de Dicha Firma.</label><br><br>
+            <input type="submit" value="Ingresar">
+        </form>
+    </div>
+
+
+</body>
+
+</html>

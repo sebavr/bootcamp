@@ -1,0 +1,232 @@
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+/* 900 no 875 no*/
+
+#container {
+    width: 1000px;
+    height: 1255px;
+    background-color: #171717;
+}
+
+#header,
+#navBar {
+    font-family: Arial, sans-serif;
+}
+
+
+/* encabezado */
+
+#header {
+    height: 100px;
+    margin: 1 10px;
+    background-color: #1A1A1A;
+}
+
+#logo {
+    margin: 14px 0 0 5px;
+}
+
+#header p {
+    margin: 30px 5px 0 580px;
+    display: inline-block;
+    vertical-align: top;
+    color: #D5D6D4;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+#navBar {
+    height: 41px;
+    margin: 0 9px;
+    background-color: #585858;
+    background: linear-gradient(#585858, #121212);
+}
+
+#navBar p {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    color: #A1A7A4;
+    padding: 0 15px;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+#main_img {
+    display: block;
+    padding: 0 9px;
+}
+
+#linea {
+    height: 5px;
+    margin: 0 9px;
+    background-color: #3B3B3B;
+}
+
+#ofertas {
+    height: 150px;
+    margin: 0 9px;
+    background-color: #1A1A1A;
+    padding-left: 15px;
+}
+
+.bar {
+    width: 2px;
+    height: 26px;
+    margin: 8px 0;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #525252;
+    box-shadow: 1px 1px inset;
+    border-radius: 5px;
+}
+
+#ofertas img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 25px 0;
+}
+
+.cuadro {
+    width: 165px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+.cuadro h2 {
+    font-size: 108%;
+    color: #F3852C;
+}
+
+.cuadro p {
+    font-size: 84%;
+    line-height: 108%;
+    margin-top: 5px;
+    color: #CFCFCF;
+    font-family: Arial, sans-serif;
+}
+
+
+/*cuadrito de buy*/
+
+#buy_text {
+    width: 676px;
+    margin: 35px 0;
+    display: inline-block;
+    padding-left: 30px;
+    font-family: Arial, sans-serif;
+}
+
+#buy_now {
+    height: 153px;
+    margin: 0 10px;
+    color: white;
+    background: repeating-linear-gradient(135deg, #020202, #020202 1px, #1F1E1F 1.5px);
+}
+
+#texto_o {
+    font-size: 80%;
+    color: #B0B0A1;
+}
+
+#titulo {
+    font-size: 130%;
+    margin-bottom: 10px;
+    color: #F2F2F2;
+}
+
+
+/* detalle del boton naranjo*/
+
+#buy_btn {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 90%;
+    vertical-align: top;
+    text-align: center;
+    margin: 55px 30px 55px 116px;
+    background-color: orange;
+    border-radius: 5px;
+    background: linear-gradient(#F29C5B, #EF7F2C);
+}
+
+#portfolio_header p:last-child {
+    margin-right: 9px;
+    text-align: right;
+    font-size: 70%;
+    color: #F3852C;
+    font-family: Arial, sans-serif;
+}
+
+#portfolio_header p {
+    width: 478px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #1A1A1A;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+}
+
+#portfolio_header p:first-child {
+    margin-left: 12px;
+    padding-left: 8px;
+    color: #F2F2F2;
+}
+
+#proyectos_container {
+    margin: 0 7px;
+}
+
+.proyecto img {
+    width: 220px;
+    border: 5px solid #363636;
+}
+
+.proyecto p {
+    color: white;
+    font-size: 70%;
+    line-height: 18px;
+    color: #CFCFCF;
+    font-family: Arial, sans-serif;
+}
+
+
+/* titulos de abajooooooo*/
+
+.proyecto h3 {
+    color: #F3852C;
+    margin: 10px 0;
+}
+
+.proyecto {
+    width: 222px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 9px;
+}
+
+
+/* boton chiquitito de la esquina derecha inferior*/
+
+#boton_chico {
+    font-size: 65%;
+    text-align: right;
+    line-height: 80px;
+    color: #7C7865;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#buy_btn {
+    color: white;
+}

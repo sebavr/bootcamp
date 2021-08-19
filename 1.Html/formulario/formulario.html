@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <div style="text-align:center;">
+        <h1>Mi formulario de registro</h1>
+        <form action="/action_page.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="email">Contraseña:</label>
+            <input type="text" id="Contrasena" name="contra"><br><br>
+            <label for="email">Confirmar:</label>
+            <input type="text" id="Confirmar" name="confirmar"><br><br>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Hombre</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Mujer</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Otro</label><br><br>
+
+            <label for="birthday">Cumpleaños:</label>
+            <input type="date" id="birthday" name="birthday"><br><br> Una breve descripción de ti:<br><br>
+            <textarea name="message" style="width:200px; height:150px;">Coloca una descripción de ti</textarea><br><br>
+            <label>Lenguaje favorito: &nbsp </label><select name="genero">
+            <option value="JAVA">Java</option>
+            <option value="PHP">Php</option>
+            <option value="Ambos">ambos</option>
+        </select><br><br>
+
+            <input type="submit" value="Enviar">
+
+
+        </form>
+    </div>
+</body>
+
+</html>

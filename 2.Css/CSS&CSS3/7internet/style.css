@@ -1,0 +1,264 @@
+#contenedor {
+    display: inline-block;
+    background-color: white;
+    margin: 0px 15px 0px 100px;
+    height: 1269px;
+    width: 1200px;
+}
+
+
+/*-----header-----*/
+
+#header img {
+    width: 100px;
+}
+
+#header {
+    display: inline-block;
+    font-size: 60px;
+}
+
+.titulo2 {
+    background-color: rgba(54, 113, 164, 255);
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: sans-serif;
+}
+
+
+/*--------anuncio------*/
+
+div#anuncios {
+    display: inline-block;
+    width: 257px;
+    height: 709px;
+    padding: 20px;
+}
+
+#anuncios div#anuncio1,
+#anuncios div#p {
+    background-image: linear-gradient(rgba(229, 229, 229, 255), rgba(253, 252, 253, 255));
+    display: inline-block;
+}
+
+div#anuncios div#anuncio1 {
+    border-bottom: 3px solid silver;
+}
+
+#anuncios div#anuncio1 span {
+    color: red;
+}
+
+#anuncios div#anuncio1 .blue span {
+    color: rgba(34, 100, 159, 255);
+}
+
+#anuncios div#anuncio1 div#botones p {
+    background-color: rgba(56, 118, 171, 255);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px silver;
+}
+
+#anuncios div#anuncio1 div#botones p.orange {
+    background-color: rgba(241, 123, 0, 255);
+    margin-top: 5px;
+}
+
+#botones {
+    margin: 15px 15px 40px 15px;
+}
+
+#anuncios div#anuncio2 {
+    display: inline-block;
+    background-image: url(images/ad_background.png);
+    height: 430px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 2px 2px silver;
+}
+
+#anuncios div#anuncio2 p {
+    margin-bottom: 0px;
+}
+
+
+/*--ninja--*/
+
+#anuncios div#anuncio2 img {
+    width: 40%;
+    display: inline-block;
+    margin: 0px 30px 0px 50px;
+}
+
+#anuncios div#anuncio2 button {
+    display: inline-block;
+    margin-left: 12px;
+    background-color: rgba(13, 197, 222, 255);
+    color: white;
+    padding: 5px 41px 5px 41px;
+    font-size: 25px;
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+    border-color: rgba(13, 197, 222, 255);
+}
+
+
+/*----------telefono------*/
+
+
+/*--casita--*/
+
+#cabecera #casa img {
+    width: 25px;
+    height: 25px;
+}
+
+#cabecera span {
+    color: rgba(37, 102, 158, 255);
+    font-size: 20px;
+    width: 272px;
+    vertical-align: top;
+}
+
+#cabecera {
+    display: inline-block;
+    vertical-align: top;
+    width: 895px;
+}
+
+div#cuerpo h3 {
+    font-size: 25px;
+    color: rgba(34, 100, 159, 255);
+    margin-bottom: 0px;
+}
+
+div#cuerpo h3#raya {
+    border-top: 3px solid silver;
+}
+
+
+/*--telefono fono--*/
+
+div#cabecera div#cfono {
+    display: inline-block;
+    margin-left: 575px;
+}
+
+#cabecera #cfono img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: center;
+    padding-top: 5px;
+}
+
+div#cfono span {
+    display: inline-block;
+    font-size: 12px;
+}
+
+
+/*numero celeste*/
+
+div#cfono div #numero {
+    display: inline-block;
+    font-size: 33px;
+    color: rgba(1, 192, 222, 255);
+    font-weight: bold;
+}
+
+#cabecera #cfono div {
+    display: inline-block;
+    width: 188px;
+    vertical-align: top;
+}
+
+
+/*-----------texto--------*/
+
+#cuerpo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#cuerpo p {
+    display: inline-block;
+}
+
+img.server {
+    width: 30%;
+    margin-left: 300px;
+}
+
+
+/*----------pie-------------*/
+
+#pie img {
+    width: 100px;
+}
+
+#pie {
+    border: 2px blue solid;
+}
+
+img.big3 {
+    width: 17%;
+    display: inline-block;
+    vertical-align: center;
+}
+
+div#desc {
+    width: 700px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+div#desc h3 {
+    font-size: 25px;
+    color: rgba(34, 100, 159, 255);
+    margin-top: 3px;
+}
+
+div#big {
+    border: 5px solid rgba(0, 132, 225, 255);
+    padding: 10px;
+    border-bottom: none;
+}
+
+
+/*----tamaño letra contenido---*/
+
+div#cuerpo p,
+div#cuerpo ul li,
+div#cuerpo ol li,
+div#desc p {
+    font-size: 19px;
+}
+
+div#cuerpo ul {
+    margin-top: 0px;
+}
+
+div#contenedor h1#header {
+    margin-bottom: 0px;
+    color: rgba(70, 71, 70, 255);
+}
+
+div#contenedor h1#header span {
+    color: rgba(34, 100, 159, 255);
+}
+
+div#anuncio1 p {
+    font-size: 20px;
+    font-weight: bold;
+}

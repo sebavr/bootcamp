@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        // clima en london
+        // http://api.openweathermap.org/data/2.5/weather?q=London,uk&&appid=f72debafbc674167aae2725b1e601891
+
+
+        $(document).ready(function() {
+            $('form').submit(function() {
+                // your code here (build up your url)
+                let x = $("#city").val();
+
+
+                x = x.replace(" ", '%20');
+                console.log(x);
+
+
+
+                let url = 'http://api.openweathermap.org/data/2.5/weather?q=' + x + ',us&&appid=f72debafbc674167aae2725b1e601891&units=imperial'
+                console.log(x)
+                console.log(url)
+
+
+                $.get(url, function(res) {
+                    console.log(res)
+                    let output = '<ul>'
+                    $("#resultado").html("<li>" + res.name + ": " + res.weather[0].description + "</li>");
+                    $("#resultado").append("<li>Temperatura : " + res.main.temp + "</li>");
+                    $("#resultado").append("<li>Coordenadas : " + res.coord.lat + res.coord.lon + "</li>");
+                    output += '</ul>'
+                }, 'json');
+                // don't forget to return false so the page doesn't refresh
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <div>City:<input id="city" input="text"></div>
+        <button>Submit</button></form>
+    <div id="resultado"></div>
+
+
+</body>
+
+</html>

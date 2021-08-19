@@ -1,0 +1,13 @@
+body{
+    color: blanchedalmond;
+    background-image: url("fondo1.png")
+}
+h2{
+    color: black;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);}
+h4{
+        color: rgb(173, 9, 9);
+        text-shadow: 2px 2px 2px rgb(255, 255, 255);}
+P{
+    color: brown;
+}

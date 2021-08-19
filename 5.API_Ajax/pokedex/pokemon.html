@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+
+
+
+
+
+            pokes(1, 151)
+
+            function pokes(inicio, final) {
+                let output = '';
+                for (var i = inicio; i <= final; i++) {
+                    output += '<img id=' + i + ' src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/' + i + '.png>';
+                    $('#pokemon').html(output);
+                };
+            }
+            $(document).on("click", "img", function() {
+                let x = $(this).attr("id");
+                alert("Hiciste click al pokemon Nº " + x);
+                $.get("https://pokeapi.co/api/v2/pokemon/" + x + "/",
+                    function(res) {
+                        var tipos = "<ul>";
+                        $("#nombre h3").html(res.name);
+                        $("#nombre p").html("<img style='height:9%;' src=" + res.sprites.front_shiny + ">");
+
+                        for (var i = 0; i < res.types.length; i++) {
+                            tipos += "<li>" + res.types[i].type.name + "</li>";
+                        }
+                        tipos += "</ul>";
+
+                        $("#tipo").html("Tipo: " + tipos);
+                        $("#peso").html("Peso: " + res.weight + " Kg");
+                        $("#altura").html("Altura: " + Math.round(res.height) * 10 + " Centímetros");
+
+                    }, "json");
+            });
+
+            $("img").hover(function() {
+                $(this).css("height", "3.2%");
+            }, function() {
+                $(this).css("height", "3%");
+            });
+
+
+
+        });
+    </script>
+
+    <style>
+        #pokedex {
+            border: 3px solid red;
+        }
+        
+        img {
+            height: 3%;
+        }
+        
+        p img {
+            height: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row"></div>
+
+        <div class="row">
+            <div id="pokemon" class="col-9"></div>
+            <div id="pokedex" class="col-3">
+                <div id="nombre">
+                    <h3></h3>
+                    <p></p>
+                    <h5 id="tipo"></h5>
+                    <h5 id="peso"></h5>
+                    <h5 id="altura"></h5>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

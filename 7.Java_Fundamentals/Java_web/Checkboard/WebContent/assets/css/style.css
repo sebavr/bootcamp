@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+
+div.blueTable {
+ 
+
+}
+
+.divTableCell2{
+	 background-color: red;
+	  height:20px;
+       width:20px;
+       border: none;
+       display: inline-block;
+       margin: 0px;
+}
+
+.divTableCell1{
+	 background-color: #0080ff;
+	  height:20px;
+       width:20px;
+       border: none;
+       display: inline-block;
+       margin: 0px;
+}
+.divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+  border: 1px solid #AAAAAA;
+
+}
+
+
+
+.blueTable .tableFootStyle .links {
+	 text-align: right;
+}
+
+
+.blueTable.outerTableFooter .tableFootStyle {
+  
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}

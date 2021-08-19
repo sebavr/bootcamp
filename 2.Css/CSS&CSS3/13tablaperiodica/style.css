@@ -1,0 +1,209 @@
+* {
+    margin: 1px;
+}
+
+div.fila8 div.vacio.r span,
+div.fila9 div.vacio.rr span {
+    margin-left: 55px;
+}
+
+div.caja,
+div.vacio {
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 50px;
+    margin: 2px;
+}
+
+div.vacio {
+    outline: 1px solid none;
+}
+
+.caja {
+    outline: 1px solid black;
+}
+
+.caja:nth-child(4),
+.vacio:nth-child(4) {
+    margin-left: 20px;
+}
+
+.fila7 .caja:nth-child(1),
+.fila7 .caja:nth-child(2),
+.fila7 .caja:nth-child(3),
+.fila7 .caja:nth-child(4),
+.fila7 .caja:nth-child(5),
+.fila7 .caja:nth-child(6),
+.fila7 .caja:nth-child(7),
+.fila7 .caja:nth-child(8),
+.fila7 .caja:nth-child(9),
+.fila7 .caja:nth-child(10),
+.fila7 .caja:nth-child(11),
+.fila7 .caja:nth-child(12),
+.fila7 .caja:nth-child(13),
+.fila7 .caja:nth-child(14),
+.fila7 .caja:nth-child(15),
+.fila7 .caja:nth-child(16),
+.fila7 .caja:nth-child(17),
+.fila7 .caja:nth-child(18),
+.fila7 .caja:nth-child(19) {
+    margin-bottom: 25px;
+}
+
+
+/*espacios----------------------
+
+.fila7 .caja:nth-child(1),
+.fila7 .caja:nth-child(2),
+.fila7 .caja:nth-child(3),
+.fila7 .caja:nth-child(4),
+.fila7 .caja:nth-child(5),
+.fila7 .caja:nth-child(6),
+.fila7 .caja:nth-child(7),
+.fila7 .caja:nth-child(8),
+.fila7 .caja:nth-child(9),
+.fila7 .caja:nth-child(10),
+.fila7 .caja:nth-child(11),
+.fila7 .caja:nth-child(12),
+.fila7 .caja:nth-child(13),
+.fila7 .caja:nth-child(14),
+.fila7 .caja:nth-child(15),
+.fila7 .caja:nth-child(16),
+.fila7 .caja:nth-child(17),
+.fila7 .caja:nth-child(18) {
+    margin-bottom: 25px;
+}
+*/
+
+
+/*---azul--*/
+
+.caja:nth-child(2),
+.caja:nth-child(3) {
+    background-color: rgba(104, 155, 255, 255);
+}
+
+.caja:nth-child(4),
+.caja:nth-child(5),
+.caja:nth-child(6),
+.caja:nth-child(7),
+.caja:nth-child(8),
+.caja:nth-child(9),
+.caja:nth-child(10),
+.caja:nth-child(11),
+.caja:nth-child(12),
+.caja:nth-child(13) {
+    background-color: rgba(252, 154, 153, 255);
+}
+
+.caja:nth-child(14),
+.caja:nth-child(15),
+.caja:nth-child(16),
+.caja:nth-child(17),
+.caja:nth-child(18),
+.caja:nth-child(19) {
+    background-color: rgba(254, 203, 0, 255);
+}
+
+.fila8 .caja:nth-child(4),
+.fila8 .caja:nth-child(5),
+.fila8 .caja:nth-child(6),
+.fila8 .caja:nth-child(7),
+.fila8 .caja:nth-child(8),
+.fila8 .caja:nth-child(9),
+.fila8 .caja:nth-child(10),
+.fila8 .caja:nth-child(11),
+.fila8 .caja:nth-child(12),
+.fila8 .caja:nth-child(13),
+.fila8 .caja:nth-child(14),
+.fila8 .caja:nth-child(15),
+.fila8 .caja:nth-child(16),
+.fila8 .caja:nth-child(17) {
+    background-color: rgba(31, 202, 33, 255);
+}
+
+.fila9 .caja:nth-child(4),
+.fila9 .caja:nth-child(5),
+.fila9 .caja:nth-child(6),
+.fila9 .caja:nth-child(7),
+.fila9 .caja:nth-child(8),
+.fila9 .caja:nth-child(9),
+.fila9 .caja:nth-child(10),
+.fila9 .caja:nth-child(11),
+.fila9 .caja:nth-child(12),
+.fila9 .caja:nth-child(13),
+.fila9 .caja:nth-child(14),
+.fila9 .caja:nth-child(15),
+.fila9 .caja:nth-child(16),
+.fila9 .caja:nth-child(17) {
+    background-color: rgba(31, 202, 33, 255);
+}
+
+
+/*Fuentes*/
+
+p.numero,
+p.peso {
+    font-size: 75%;
+    text-align: center;
+}
+
+p.simbolo {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(25, 19, 162, 255);
+}
+
+.vacio {
+    color: red;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+/*--------queries---------------*/
+
+@media only screen and (max-width: 480px) {
+    div.caja,
+    div.vacio {
+        width: 4%;
+        font-size: 60%;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    div.caja,
+    div.vacio {
+        width: 4.2%;
+    }
+}
+
+@media only screen and (min-width: 621px) {
+    div.caja,
+    div.vacio {
+        width: 4.3%;
+    }
+}
+
+@media only screen and (min-width: 656px) {
+    div.caja,
+    div.vacio {
+        width: 4.5%;
+    }
+}
+
+@media only screen and (min-width: 886px) {
+    div.caja,
+    div.vacio {
+        width: 4.6%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    div.caja,
+    div.vacio {
+        width: 4.7%;
+    }
+}

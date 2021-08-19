@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato-ninjat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        img {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+
+            $('img').click(function() {
+                let ninja = $(this).attr("src");
+                let gato = $(this).attr("data");
+                $(this).attr("src", gato);
+                $(this).attr("data", ninja);
+            });
+
+
+
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Rompecabezas</h2>
+        <div class="row">
+            <img src="img/ninja0.png" data="img/cat0.png" />
+        </div>
+        <div class="row">
+            <img src="img/ninja1.png" data="img/cat1.png" />
+        </div>
+
+        <div class="row">
+            <img src="img/cat2.png" data="img/ninja2.png" />
+        </div>
+
+        <div class="row">
+            <img src="img/ninja3.png" data="img/cat3.png" />
+        </div>
+
+        <div class="row">
+            <img src="img/ninja4.png" data="img/cat4.png" />
+        </div>
+    </div>
+
+</body>
+
+</html>

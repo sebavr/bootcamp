@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones-jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+            $('#click').click(function() {
+                alert("Esta es la función click. Este popup es por medio de alert y click");
+            });
+
+            $('#oculto').click(function() {
+                $('p#texto1').hide();
+                $('#oculto').hide();
+            });
+
+            $('#mostrar').click(function() {
+                $('p#texto1').show();
+                $('#oculto').show();
+
+            });
+            $('#toggg').click(function() {
+                $('p#texto3').toggle();
+
+
+            });
+
+            $('#sup').click(function() {
+                $('p#texto4').slideUp();
+            });
+
+            $('#sdown').click(function() {
+                $('p#texto4').slideDown();
+            });
+
+            $('#slidt').click(function() {
+                $('p#texto5').slideToggle();
+            });
+
+            $('#fout').click(function() {
+                $('p#texto6').fadeOut();
+            });
+
+            $('#fin').click(function() {
+                $('p#texto6').fadeIn();
+            });
+
+
+            $('#addA').click(function() {
+                $('p#texto7').addClass("superduper");
+            });
+
+            $('#remA').click(function() {
+                $('p#texto7').removeClass("superduper");
+            });
+
+            $("#bfre").click(function() {
+                $("p#texto8").before("<p>Hola a todos!</p>");
+            });
+            $("#aftr").click(function() {
+                $("p#texto8").after("<p>Hola a todos!</p>");
+            });
+
+            $("#appt").click(function() {
+                $("p#texto9").append(" <b>texto agregado</b>.");
+            });
+            $("#appl").click(function() {
+                $("ol").append("<li>Lista Objeto #</li>");
+            });
+
+            $("#htmm").click(function() {
+                $("p#texto10").html("Tenía que ser el  <b>Chavo</b>.Chavo esta escrito entre 'b'");
+            });
+
+            $("#atri").click(function() {
+                $("img").attr("width", "100");
+
+            });
+
+            $("#val").click(function() {
+                $("input:text").val("Homero Simpson");
+            });
+
+            $("#text").click(function() {
+                $("div#texto13 p.col-md-10").text("Hola mundo");
+            });
+
+
+        });
+    </script>
+    <style>
+        * {
+            outline: 0px solid white;
+        }
+        
+        p {
+            text-align: right;
+        }
+        
+        hr {
+            border-top: 3px solid rgba(0, 0, 0, .1);
+        }
+        
+        .superduper {
+            color: blue;
+            font-size: 150%;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<div class="container">
+
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Click</h2>
+    </div>
+    <div class="row" style="margin-left: 0px;">
+        <button id="click" class="col-md-2 btn btn-primary ">Click</button>
+        <p style="text-align: left; " class="col-md-10  ">Click mostrar la función "CLICK "</p>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Hide y Show</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="oculto" class="col-md-2 btn btn-primary">Hide</button>
+        <p id="texto1" style="text-align: left; " class="col-md-10 ">Haz click para ocultar este párrafo</p>
+        <button id="mostrar" class="col-md-2 btn btn-secondary">Show</button>
+        <p id="texto2" style="text-align: left; " class="col-md-10 ">Haz click para mostrar el párrafo anterior</p>
+
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Toggle</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="toggg" class="col-md-2 btn btn-success">Toggle</button>
+        <p id="texto3" style="text-align: left; " class="col-md-10 ">Haz click para usar la función Toggle</p>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">SlideDown y SlideUp</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <p id="texto4" style="text-align: left; " class="col-md-10 ">Haz click para usar la función SlideDown y SlideUp</p><br>
+
+    </div>
+    <div>
+        <button id="sup" class="col-md-2 btn btn-secondary">SlideUp</button>
+        <button id="sdown" class="col-md-2 btn btn-primary">SlideDown</button>
+    </div>
+    <hr>
+
+
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">SlideToggle</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="slidt" class="col-md-2 btn btn-danger">SlideToggle</button>
+        <p id="texto5" style="text-align: left; " class="col-md-10 ">Haz click para usar la función SlideToggle arriba y abajo</p>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">FadeOut y FadeIn</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <p id="texto6" style="text-align: left; " class="col-md-10 ">Haz click para usar la función Fadeout y FadeIn</p><br>
+
+    </div>
+    <div>
+        <button id="fout" class="col-md-2 btn btn-primary">FadeOut</button>
+        <button id="fin" class="col-md-2 btn btn-secundary">FadeIn</button>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">addClass</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="addA" class="col-md-2 btn btn-success ">addClass</button>
+        <button id="remA" class="col-md-2 btn btn-danger">RemoveClass</button>
+        <p id="texto7" style="text-align: left; " class="col-md-10 ">Haz click para usar añadir otra clase al texto</p>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Before y After</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="bfre" class="col-md-2 btn btn-dark">Before</button>
+        <button id="aftr" class="col-md-2 btn btn-primary">After</button>
+        <div>
+            <p id="texto8" style="text-align: left; " class="col-md-10 ">Haz click para usar añadir texto arriba del parrafo</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Append</h2>
+        <p style="text-align: left; " class="col-md-10 ">Haz click para usar la función Toggle</p>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="appt" class="col-md-2 btn btn-secundary">Append texto</button>
+        <button id="appl" class="col-md-2 btn btn-success">Append Lista</button>
+    </div>
+    <div>
+
+        <p id="texto9" style="text-align: left;">A este parrafo le añadiremos texto</p>
+        <ol>
+            <li>Lista objeto 1</li>
+            <li>Lista objeto 2</li>
+            <li>Lista objeto 3</li>
+        </ol>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">HTML</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="htmm" class="col-md-2 btn btn-danger">HTML</button>
+        <p id="texto10" style="text-align: left; " class="col-md-10 ">Haz click para cambiar este texto por uno html</p>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Attr</h2>
+    </div>
+    <img src="campo.png">
+    <div class="row" style="margin-left: 0px; ">
+
+        <button id="atri" class="col-md-2 btn btn-warning">attr</button>
+        <p id="texto11" style="text-align: left; " class="col-md-10 ">Haz click para cambiar la imagen y sus atributos</p>
+    </div>
+    <hr>
+
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Val</h2>
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <p id="texto12" style="text-align: left; " class="col-md-10 ">Nombre: <input type="text" name="user"></p>
+    </div>
+    <div class="row" style="margin-left: 80px; ">
+        <button id="val" class="col-md-2 btn btn-primary">Aprieta para colocar un valor en el campo</button>
+    </div>
+    <hr>
+    <div class="row">
+        <h2 style="text-align: center; " class="col-lg-12 ">Text</h2>
+    </div>
+    <div class="row" id="texto13" style="margin-left: 0px; ">
+
+        <p style="text-align: left; margin-bottom: 0px;" class="col-md-10">Este es un parrafo</p>
+        <span style="text-align: left; " class="col-md-10">Este es un span</span>
+        <p style="text-align: left; " class="col-md-10">Este es un parrafo</p>
+
+    </div>
+    <div class="row" style="margin-left: 0px; ">
+        <button id="text" class="col-md-2 btn btn-secondary">Click Text</button>
+    </div>
+    <p style="text-align: left; " class="col-md-10 ">Haz click para cambiar colocar los parrafos como texto:"Hola mundo"</p>
+
+
+
+
+</html>

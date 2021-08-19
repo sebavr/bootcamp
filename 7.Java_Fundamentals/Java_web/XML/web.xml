@@ -1,0 +1,13 @@
+● <display-name> Muestra el titulo del documento
+
+● <servlet> Muestra el nombre y lo que hace el servlet
+
+● <servlet-name>Muestra el nombre
+
+● <servlet-class>Muestra la clase del servlet
+
+● <servlet-mapping> Indica la ruta y el nombre del servlet
+
+● <url-pattern>Muestra la ruta del servlet
+
+● <welcome-file> Indica el documento inicial

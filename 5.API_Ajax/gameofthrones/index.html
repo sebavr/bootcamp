@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of thrones</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Minified JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        img {
+            width: 200px;
+            height: 120px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .primero {
+            margin-bottom: 40px;
+        }
+        
+        .segundo {
+            background-color: lightsteelblue;
+            border: 3px solid rgba(83, 21, 21, 0.521);
+            background: linear-gradient(#b7c75e7a, #fffafa);
+        }
+        
+        body {
+            background-image: url(img/back.jpg);
+            background-size: cover;
+        }
+    </style>
+    <script>
+        //"https://www.anapioficeandfire.com/api/houses/362" STARk
+        //https://www.anapioficeandfire.com/api/houses/378 Targaryan
+        //"https://www.anapioficeandfire.com/api/houses/229" Lannister
+        //"https://www.anapioficeandfire.com/api/houses/16" Baratheon
+
+
+
+        $(document).ready(function() {
+
+            $(".texto").html('<h1>Welcome to World of  a song of Ice and Fire</h1>')
+            let n_house = '';
+            $("img").on("click", function() {
+
+                $(".texto").fadeOut()
+                let x = $(this).attr("id");
+                /*if (x == "baratheon") {
+                    n_house = 17
+                }*/
+                switch (x) {
+                    case "baratheon":
+                        n_house = 17;
+
+                        break;
+                    case "stark":
+                        n_house = 362;
+                        break;
+                    case "lannister":
+                        n_house = 229;
+                        break;
+                    case "targaryen":
+                        n_house = 378;
+                        break;
+                }
+                let url = 'https://www.anapioficeandfire.com/api/houses/' + n_house
+                $.get(url, function(res) {
+
+                    $(".texto").fadeIn(1000)
+
+
+                    $(".texto").html("<h1>" + res.name + "</h1>");
+                    $(".texto").append("<h2 style='text-align:center;'>" + '"' + res.words + '"' + "</h2>");
+                    $(".texto").append("<h3> Titulos :</h3>")
+                    $(".texto").slideDown()
+                    for (let i = 0; i < res.titles.length; i++) {
+                        output = $(".texto").append("<h4>" + res.titles[i] + " </h4>");
+                    }
+
+                }, "json");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Canción de hielo y fuego</h1>
+        <div class="row primero">
+            <div class="col-3">
+                <img id="baratheon" src="img/baratheon.png">
+            </div>
+            <div class="col-3">
+                <img id="lannister" src="img/lannister.jpg">
+            </div>
+            <div class="col">
+                <img id="stark" src="img/stark.jpg">
+            </div>
+            <div class="col">
+                <img id="targaryen" src="img/targaryen.jpg">
+            </div>
+
+        </div>
+
+        <div class="row segundo">
+
+            <div class="texto">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

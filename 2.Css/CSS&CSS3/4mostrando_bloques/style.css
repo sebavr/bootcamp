@@ -1,0 +1,45 @@
+        * {
+            outline: 0px red dotted;
+        }
+        
+        #fondo {
+            background-color: oldlace;
+            padding: 30px;
+            width: 920px;
+        }
+        
+        #cabecera {
+            text-align: center;
+            font-size: 30px;
+            vertical-align: top;
+            margin-top: -30px;
+        }
+        
+        #cabecera img {
+            width: 150px;
+            height: 75px;
+        }
+        
+        #cabecera h2 img {
+            background-color: white;
+        }
+        
+        #corrida1 img {
+            display: inline-block;
+            width: 14%;
+            height: 15%;
+            border: 5px solid black;
+            margin: 1px;
+        }
+        /*par*/
+        
+        #corrida1 :nth-last-of-type(even) {
+            background-color: red;
+            padding: 20px;
+        }
+        /*impar*/
+        
+        #corrida1 :nth-last-of-type(odd) {
+            background-color: cyan;
+            padding: 20px;
+        }

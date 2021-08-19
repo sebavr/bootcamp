@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Etiquetas meta requeridas -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var fecha = document.getElementById("fecha").value;
+            var rut = document.getElementById("rut").value;
+            var email = document.getElementById("email").value;
+            var telefono = document.getElementById("telefono").value;
+            var ciudad = document.getElementById("ciudad").value;
+            var comuna = document.getElementById("comuna").value;
+            var domicilio = document.getElementById("domicilio").value;
+            var renta = document.getElementById("renta").value;
+            var aut = document.getElementById("aut").checked;
+            var perfil = document.getElementById("perfil").value;
+
+
+            if (nombre == "" || apellido == "" || fecha == "" || rut == "" || email == "" || telefono == "" || ciudad == "" || domicilio == "" || renta == "" || aut == "" || perfil == "") {
+                {
+                    alert("Asegurese de llenar todos los campos");
+                }
+                //|| renta == "" 
+                return false;
+            }
+        }
+
+        function selecPerfil() {
+            var y = '<div id="c_renta"><label for="inputRut">Renta</label><input type="text" class="form-control" id="renta" placeholder="$10000000"</div>';
+            var z = "";
+            var w = '<div id="c_renta"><label for="inputRut"></label><input type="hidden" value="0" class="form-control" id="renta" </div>';
+            var x = document.getElementById("perfil").value;
+
+
+
+            if (perfil.value == "Ti" || perfil.value == "Td") {
+                document.getElementById("c_renta").innerHTML = y;
+            } else {
+                document.getElementById("c_renta").innerHTML = z;
+            }
+
+            if (perfil.value == "Eu") {
+                renta = 0;
+                document.getElementById("c_renta").innerHTML = w;
+
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container col-md-6" style="padding-right: 0px;padding-left: 0px;">
+
+        <form class="bg-light p-5" onsubmit="return validateForm()" action="/action_page.php" style="border: 2px solid #900C3F;
+        border-radius: 38px;color:#900C3F; opacity: 0.89;">
+            <h2 style="text-align:center;vertical-align: top; margin-bottom: 20px;color:#900C3F ;">Regístrate</h2>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Nombres</label>
+                    <input type="text " id="nombre" class="form-control" placeholder="Nombres">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Apellidos</label>
+                    <input type="text" id="apellido" class="form-control" placeholder="Apellidos">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Rut</label>
+                    <input type="text" class="form-control" id="rut" placeholder="12345678-9">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="fecha" placeholder="12345678-9">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="12345678-9">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="xxxx@gmail.cl">
+                </div>
+                <div class="form-group col-md-9">
+                    <label for="inputRut">Domicilio</label>
+                    <input type="text" class="form-control" id="domicilio" placeholder="calle 1">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Concepción">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputRut">Comuna</label>
+                    <input type="text" class="form-control" id="comuna" placeholder="Penco">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>¿Con cual perfil te identificas?</label>
+                    <select class="form-select" aria-label="Default select example" id="perfil" onchange="selecPerfil()" required>
+                    <option selected></option>
+                    <option value="Ti">Trabajador Independiente</option>
+                    <option value="Td">Trabajador Dependiente</option>
+                    <option value="Eu">Estudiante Universitario</option></select>
+                    </select>
+                </div>
+                <p class="form-group col-md-9" id="c_renta">
+
+                </p>
+
+                <!--aqui va el "perfil" 
+                
+                 <div class="form-group col-md-9" id="c_renta">
+                    <label for="inputRut">Renta</label>
+                    <input type="text" class="form-control" id="renta" placeholder="$10000000">
+                </div>
+                -->
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="aut">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Autorizo a Super banco por intermedio de EQUIFAX a validar mi identidad a través de mi RUT/Nº de serie y a solicitar mi certificado de deuda en las entidades financieras de origen con el fin de ser consideradas como antecedentes para la solicitud y evaluación de Portabilidad Financiera, dando así cumplimiento al artículo 4º de la ley Nº 19.628 sobre Protección de la Vida Privada y a lo dispuesto en la ley Nº 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicio de Certificación de Dicha Firma.
+                    </label>
+                </div>
+                <br><button style="background-color: #900C3F; margin-top: 20px;text-align: center;" type="submit " class="btn btn-primary ">Ingresar</button>
+        </form>
+        </div>
+
+</body>
+
+</html>

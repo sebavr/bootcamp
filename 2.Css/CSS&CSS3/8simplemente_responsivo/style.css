@@ -1,0 +1,59 @@
+span {
+    font-weight: bold;
+}
+
+h2,
+p {
+    padding: 20px;
+}
+
+#first,
+#second,
+#third {
+    border: 2px solid rgba(225, 214, 154, 255);
+}
+
+#first {
+    background-color: rgba(179, 178, 178, 255);
+}
+
+#second {
+    background-color: rgba(204, 204, 204, 255);
+}
+
+#third {
+    background-color: rgba(254, 255, 155, 255);
+}
+
+@media only screen and (max-width: 480px) {
+    .lg {
+        display: none;
+    }
+    .med {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:481px) {
+    .sm {
+        display: none;
+    }
+    .lg {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .cuadro {
+        background-color: yellow;
+    }
+    .sm {
+        display: none;
+    }
+    .med {
+        display: none;
+    }
+    .lg {
+        display: initial;
+    }
+}

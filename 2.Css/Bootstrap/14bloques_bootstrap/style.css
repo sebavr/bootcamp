@@ -1,0 +1,107 @@
+* {
+    outline: 1px solid none;
+}
+
+
+/*----texto y backgrounds---*/
+
+.bg-dark {
+    background-color: rgba(53, 58, 64, 255);
+}
+
+.text-light {
+    color: white;
+    text-align: center;
+    vertical-align: top;
+}
+
+.text-black {
+    color: black;
+    text-align: center;
+    vertical-align: top;
+}
+
+.bg-blue {
+    background-color: rgba(70, 162, 185, 255);
+}
+
+.bg-yellow {
+    background-color: rgba(245, 193, 8, 255);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-green {
+    background-color: rgba(61, 166, 69, 255);
+}
+
+.p-40 {
+    padding: 40px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.w-900 {
+    width: 912px;
+}
+
+.w-270 {
+    width: 270px;
+}
+
+.w-660 {
+    width: 618px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-80 {
+    padding-top: 80px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.pt-40 {
+    padding-top: 40px;
+}
+
+.h-300 {
+    height: 375px;
+}
+
+.h-400 {
+    height: 400px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.pr-31 {
+    padding-right: 31px;
+}
+
+.px-130 {
+    padding-right: 130px;
+    padding-left: 130px;
+}
